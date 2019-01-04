@@ -61,7 +61,8 @@ timer_1.start()
 timer_2.start()
 
 plt.show()
-    
+
+#to stop the plot
 def Stop_Plot():
     timer_1.stop()
     timer_2.stop()
