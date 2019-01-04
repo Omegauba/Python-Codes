@@ -4,7 +4,7 @@ Created on Fri Jan 4 10:57:47 2019
 
 @author: OmegaUba
 
-Small code to plot live graph of random generated noise
+Small code to plot live graph of functions
 
 """
 import matplotlib.pyplot as plt
@@ -13,6 +13,7 @@ import seaborn as sns
 
 sns.set()
 
+#define your function
 def function(x):
     return (np.sin(x) + np.sin(3*x)/3 + np.sin(5*x)/5 + np.sin(7*x)/7)*np.cos(x/11)
 
@@ -36,7 +37,7 @@ manager = plt.get_current_fig_manager()
 
 values = y_axis
 
-#the strategy is to use one array to store the values, the array gets bigger and bigger and only the last 100 elements are plotted
+#the strategy is to use one array to store the values, the array gets bigger and bigger and only the last 1000 elements are plotted
 def Random_Generator(arg):
   global values
   values = np.append(values, values.max() + 0.01)
